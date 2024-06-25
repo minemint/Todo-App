@@ -4,7 +4,7 @@ import axios from 'axios'
 const BASE_URL = 'https://6679449518a459f6394eea74.mockapi.io'
 
 export const useTodoStore = defineStore('todo', {
-  state: () => ({ // กำหนดข้อมูล state ที่จะเก็บใน store นี้
+  state: () => ({ 
     list: [],
     selectedTodo: {},
     statuses: ['Pending', 'Doing', 'Done'],
@@ -36,7 +36,7 @@ export const useTodoStore = defineStore('todo', {
       try {
         const response = await axios.post(`${BASE_URL}/todos`, bodyData)
         console.log(response.data)
-        // this.list = response.data
+
       } catch (error) {
         console.log('error', error)
       }
